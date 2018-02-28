@@ -1,7 +1,7 @@
 {
   "name": "hello-world-addon",
   "version": "1.0.1",
-  "description": "This a say hello node addon",
+  "description": "This a say hello node addon, require it then call the sayHello method",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
