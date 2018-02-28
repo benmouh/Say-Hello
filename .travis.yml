@@ -11,5 +11,5 @@ script:
  
 deploy:
   provider: npm
-  email: "aitbenmouh@gmail.com"
-  api_key: "${apikey}"
+  email: aitbenmouh@gmail.com
+  api_key: $apikey
