@@ -1,0 +1,9 @@
+language: c++
+
+os : 
+ -Linux
+
+script:
+
+ -node-gyp configure
+ -node-gyp build
