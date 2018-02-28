@@ -8,3 +8,4 @@ script:
  - node-gyp configure
  - node-gyp build
  - node index.js
+ - npm publish
