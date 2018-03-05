@@ -10,7 +10,7 @@ script:
  - npm test
  - node index.js
 install:
- -  npm install —g mocha
+ - npm install -g mocha
 deploy:
   provider: npm
   email: aitbenmouh@gmail.com
