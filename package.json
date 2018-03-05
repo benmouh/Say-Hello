@@ -4,7 +4,7 @@
   "description": "This a say hello node addon, require it then call the sayHello method",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "Lhoussaine ATI BEN MOUH <aitbenmouh@yahoo.fr> (https://github.com/benmouh)",
