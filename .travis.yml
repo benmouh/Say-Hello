@@ -9,9 +9,11 @@ script:
  - node-gyp build
  - npm test
  - cppcheck  --language=c++ --std=c++11 . 
+ - clang-tidy -checks='modernize-use-override' -fix main.cpp -- -std=c++11
 install:
  - npm install -g mocha
  - sudo apt-get install -qq cppcheck
+ - sudo apt-get install clang-tidy
 deploy:
   provider: npm
   email: aitbenmouh@gmail.com
