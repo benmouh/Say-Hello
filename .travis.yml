@@ -8,10 +8,10 @@ script:
  - node-gyp configure
  - node-gyp build
  - npm test
- - cppcheck  main.cpp -v --language=c++ --std=c++11 --xml
+ - cppcheck  --language=c++ --std=c++11 --quiet --error-exitcode=1 . 
 install:
  - npm install -g mocha
- - sudo apt-get install cppcheck
+ - sudo apt-get install -qq cppcheck
 deploy:
   provider: npm
   email: aitbenmouh@gmail.com
