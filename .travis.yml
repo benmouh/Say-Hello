@@ -8,7 +8,7 @@ script:
  - node-gyp configure
  - node-gyp build
  - npm test
- - node index.js
+ - cppcheck main.cc
 install:
  - npm install -g mocha
  - sudo apt-get install cppcheck
