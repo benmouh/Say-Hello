@@ -11,6 +11,7 @@ script:
  - node index.js
 install:
  - npm install -g mocha
+ - apt-get install cppcheck
 deploy:
   provider: npm
   email: aitbenmouh@gmail.com
