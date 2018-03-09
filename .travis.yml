@@ -13,10 +13,10 @@ script:
 install:
  - npm install -g mocha
  - sudo apt-get install -qq cppcheck
- - sudo add-apt-repository 'deb http://llvm.org/apt/trusty/ llvm-toolchain-UBUNTU-5.0 main'
+ - sudo add-apt-repository 'deb http://llvm.org/apt/trusty/ llvm-toolchain-UBUNTU-4.0 main'
  - curl -L http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
  - sudo apt-get update
- - sudo apt-get install llvm-5.0-dev
+ - sudo apt-get install llvm-4.0-dev
 deploy:
   provider: npm
   email: aitbenmouh@gmail.com
