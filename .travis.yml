@@ -27,4 +27,4 @@ deploy:
         file: "$TRAVIS_BUILD_DIR/build/Release/say_hello_addon.node"
         on:
             repo: benmouh/Say-Hello
-            tags : true
+            tags: true
