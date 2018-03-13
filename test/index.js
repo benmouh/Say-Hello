@@ -1,4 +1,4 @@
-var hello = require("./../build/Release/addon.node");
+var hello = require("./../build/Release/say_hello_addon.node");
 var assert = require('assert');
 
 console.log(hello.sayHello("Lhoussaine"));
