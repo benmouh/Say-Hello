@@ -9,7 +9,7 @@ script:
  - node-gyp build
  - npm test
  - cppcheck  -v --enable=all --language=c++ --std=c++11 . 
- - clang-tidy -checks='*' -std=c++11 -p . src/*.cpp
+ - clang-tidy  -std=c++11 -p . src/*.cpp
 install:
  - npm install -g mocha
  - sudo apt-get install -qq cppcheck
