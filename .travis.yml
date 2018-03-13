@@ -25,6 +25,7 @@ deploy:
         email: aitbenmouh@gmail.com
         api_key: $githubKey
         file: "$TRAVIS_BUILD_DIR/build/Release/say_hello_addon.node"
+        skip_cleanup: true
         on:
          repo: benmouh/Say-Hello
          tags: true
