@@ -35,4 +35,4 @@ void init(Local<Object> exports) {
 
 NODE_MODULE(NODE_GYP_MODULE_NAME, init)
 
-}
+} // end of Hello namespace
