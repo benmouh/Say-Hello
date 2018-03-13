@@ -1,8 +1,11 @@
 {
   "targets": [
     {
-      "target_name": "addon",
-      "sources": [ "main.cpp"]
+      "target_name": "say_hello_addon",
+      "sources": [ "src/main.cpp"],
+	  "include_dirs": [
+			"src"
+		]
     }
   ]
 }
