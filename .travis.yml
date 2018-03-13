@@ -21,10 +21,8 @@ deploy:
   - provider: npm
         email: aitbenmouh@gmail.com
         api_key: $apikey
-        
   - provider: releases
         email: aitbenmouh@gmail.com
         api_key: $githubKey
         on:
             tags : true
-            
