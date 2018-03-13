@@ -18,6 +18,12 @@ install:
  - sudo apt-get update
  - sudo apt-get install llvm-dev
 deploy:
-  provider: npm
-  email: aitbenmouh@gmail.com
-  api_key: $apikey
+  - provider: npm
+        email: aitbenmouh@gmail.com
+        api_key: $apikey
+        
+  - provider: releases
+        email: aitbenmouh@gmail.com
+        api_key: da492eff5278d979aa993ed58d830abb044c38a3
+        on:
+            tags : true
