@@ -27,3 +27,4 @@ deploy:
         api_key: $githubKey
         on:
             tags : true
+            
