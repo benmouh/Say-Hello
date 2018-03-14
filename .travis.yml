@@ -1,6 +1,7 @@
 language: c++
 node_js:
  - "node"
+ - "8"
 os : 
  - linux
  - osx
