@@ -22,7 +22,7 @@ void SayHello(const FunctionCallbackInfo<Value>& args) {
   }
 
   String::Utf8Value str(args[0]->ToString());
-  std::string s = static_cast<std::string*>(str); //std::string(*str);
+  std::string s = std::string(*str);
   
   std::string result = "Hello " + s;
 
