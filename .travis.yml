@@ -13,7 +13,10 @@ addons:
       - llvm-dev
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update ;fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository 'deb http://llvm.org/apt/trusty/llvm-toolchain-trusty-6.0 release' | curl -L http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add - ;fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then 
+   sudo add-apt-repository 'deb http://llvm.org/apt/trusty/llvm-toolchain-trusty-6.0 release'
+   curl -L http://llvm.org/apt/llvm-snapshot.gpg.key 
+   sudo apt-key add - ;fi
 script:
  - npm install -g node-gyp
  - node-gyp configure
