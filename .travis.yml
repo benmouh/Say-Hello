@@ -1,8 +1,11 @@
 language: c++
 
 os : 
- Linux
+ - linux
+ - osx
 
+env:
+ PLATFORM="$TRAVIS_OS_NAME"
 script:
  - npm install -g node-gyp
  - node-gyp configure
