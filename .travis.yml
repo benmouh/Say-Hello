@@ -18,12 +18,13 @@ install:
  - sudo apt-get update
  - sudo apt-get install llvm-dev
 deploy:
-  - provider: npm
+    - provider: npm
         email: aitbenmouh@gmail.com
         api_key: $apikey
-  - provider: releases
+    - provider: releases
         email: aitbenmouh@gmail.com
         api_key: $githubKey
         file: "$TRAVIS_BUILD_DIR/build/Release/say_hello_addon.node"
-        skip_cleanup: true 
+        skip_cleanup: true
+
         
