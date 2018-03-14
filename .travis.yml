@@ -8,9 +8,9 @@ script:
  - node-gyp configure
  - node-gyp build
  - npm test
- - tar cfvz $TRAVIS_BUILD_DIR/build/Release/say_hello_addon_$PLATFORM.tar.gz $TRAVIS_BUILD_DIR/build/Release/say_hello_addon.node 
  - cppcheck  -v --enable=all --language=c++ --std=c++11 . 
  - clang-tidy -checks='*' -p . src/*.cpp
+ - tar cfvz say_hello_addon_$PLATFORM.tar.gz $TRAVIS_BUILD_DIR/build/Release/say_hello_addon.node 
 install:
  - npm install -g mocha
  - sudo apt-get install -qq cppcheck
