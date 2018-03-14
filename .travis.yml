@@ -12,6 +12,7 @@ script:
  - clang-tidy -checks='*' -p . src/*.cpp
  - cd $TRAVIS_BUILD_DIR/build/
  - tar cfvz Release/say_hello_addon_$PLATFORM.tar.gz Release/say_hello_addon.node 
+ - cd $TRAVIS_BUILD_DIR
 install:
  - npm install -g mocha
  - sudo apt-get install -qq cppcheck
