@@ -2,10 +2,18 @@ language: c++
 
 os : 
  - linux
+  :64bit
  - osx
 
 env:
  PLATFORM="$TRAVIS_OS_NAME"
+addons:
+  apt:
+    packages:
+      - cppcheck
+      - llvm-dev
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update ;fi      
 script:
  - npm install -g node-gyp
  - node-gyp configure
