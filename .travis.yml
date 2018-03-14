@@ -2,9 +2,7 @@ language:
  - c++
  - node_js
 node_js:
- - "9"
- - "stable"
- - "node"
+ - '9'
 os : 
  - linux
  - osx
