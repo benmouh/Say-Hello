@@ -1,6 +1,7 @@
-language: c++
+language: 
+ - c++
+ - nodejs
 node_js:
- - "node"
  - "8"
 os : 
  - linux
