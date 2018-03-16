@@ -18,8 +18,7 @@ artifacts:
   name: say_hello_addon_win64.tar.gz
 deploy:
  provider: GitHub
- auth_token:
-  secure: $githubKey
+ auth_token: $githubKey
  artifact: build\Release\say_hello_addon_win64.tar.gz
  on:
-  appveyor_repo_tag: true
+  appveyor_repo_tag: false
