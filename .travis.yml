@@ -21,8 +21,8 @@ script:
  - node-gyp configure
  - node-gyp build
  - npm test
- - cppcheck  -v --enable=all --language=c++ --std=c++11 . 
- - clang-tidy -checks='*' -p . src/*.cpp
+# - cppcheck  -v --enable=all --language=c++ --std=c++11 . 
+# - clang-tidy -checks='*' -p . src/*.cpp
  - cd $TRAVIS_BUILD_DIR/build/Release
  - tar cfvz say_hello_addon_$PLATFORM.tar.gz say_hello_addon.node 
  - cd $TRAVIS_BUILD_DIR
