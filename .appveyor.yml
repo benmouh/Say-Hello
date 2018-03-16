@@ -1,0 +1,25 @@
+image: Visual Studio 2017
+environment:
+ nodejs_version: "8"
+platform: x64
+configuration: Release
+install:
+- ps: Install-Product node $env:nodejs_version $env:platform
+- npm install -g node-gyp
+build: off
+build_script:
+- node-gyp configure
+- node-gyp build
+- cd %APPVEYOR_BUILD_FOLDER%\build\Release\
+- 7z a -tgzip say_hello_addon_win64.tar.gz say_hello_addon.node
+- cd %APPVEYOR_BUILD_FOLDER%
+artifacts:
+- path: build\Release\say_hello_addon_win64.tar.gz
+  name: say_hello_addon_win64.tar.gz
+deploy:
+ provider: GitHub
+ auth_token:
+  secure: $githubKey
+ artifact: build\Release\say_hello_addon_win64.tar.gz
+ on:
+  appveyor_repo_tag: true
