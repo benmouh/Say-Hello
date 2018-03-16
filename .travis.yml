@@ -6,7 +6,7 @@ os :
  - osx
 
 env:
-  - ARCH="x86_64"
+  - ARCHITECTURE="x86_64"
  
 addons:
   apt:
@@ -17,7 +17,7 @@ before_install:
 # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew upgrade node && npm install -g npm ;fi
  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository 'deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-6.0 release' ;fi
  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then curl -L 'http://llvm.org/apt/llvm-snapshot.gpg.key' | sudo apt-key add - ;fi
- - echo $ARCH
+ - echo $ARCHITECTURE
  - echo $TRAVIS_OS_NAME
 script:
  - npm install -g node-gyp
@@ -27,7 +27,7 @@ script:
 # - cppcheck  -v --enable=all --language=c++ --std=c++11 . 
 # - clang-tidy -checks='*' -p . src/*.cpp
  - cd $TRAVIS_BUILD_DIR/build/Release
- - tar cfvz say_hello_addon_$TRAVIS_OS_NAME__$ARCH.tar.gz say_hello_addon.node 
+ - tar cfvz say_hello_addon_$TRAVIS_OS_NAME_$ARCHITECTURE.tar.gz say_hello_addon.node 
  - cd $TRAVIS_BUILD_DIR
 install:
  - npm install -g mocha
@@ -43,7 +43,7 @@ deploy:
  - provider: releases
    email: aitbenmouh@gmail.com
    api_key: $githubKey
-   file: "$TRAVIS_BUILD_DIR/build/Release/say_hello_addon_$TRAVIS_OS_NAME__$ARCH.tar.gz"
+   file: "$TRAVIS_BUILD_DIR/build/Release/say_hello_addon_$TRAVIS_OS_NAME__$ARCHITECTURE.tar.gz"
    skip_cleanup: true
    
         
