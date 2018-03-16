@@ -18,6 +18,7 @@ before_install:
  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository 'deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-6.0 release' ;fi
  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then curl -L 'http://llvm.org/apt/llvm-snapshot.gpg.key' | sudo apt-key add - ;fi
  - echo $ARCH
+ - echo $TRAVIS_OS_NAME
 script:
  - npm install -g node-gyp
  - node-gyp configure
