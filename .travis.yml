@@ -6,7 +6,7 @@ os :
  - osx
 
 env:
-  - ARCHITECTURE="x86_64"
+  - ARCHITECTURE="x64"
  
 addons:
   apt:
