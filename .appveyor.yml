@@ -17,6 +17,7 @@ artifacts:
 - path: build\Release\say_hello_addon_win64.tar.gz
   name: say_hello_addon_win64.tar.gz
 deploy:
+ description: 'windows release version'
  provider: GitHub
  branch: master    
  auth_token: '%appveyorGithub%'
