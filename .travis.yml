@@ -6,8 +6,9 @@ os :
  - osx
 
 env:
+ - BUILD="x86_64"
  - PLATFORM="$TRAVIS_OS_NAME"
- - ARCH="$PLATFORM_x86_64"
+ - ARCH="$PLATFORM $BUILD"
 addons:
   apt:
     packages:
