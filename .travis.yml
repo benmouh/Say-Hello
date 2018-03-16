@@ -7,7 +7,7 @@ os :
 
 env:
  - PLATFORM="$TRAVIS_OS_NAME"
- - ARCH="64"
+ - ARCH="$PLATFORM_x86_64"
 addons:
   apt:
     packages:
@@ -25,7 +25,7 @@ script:
 # - cppcheck  -v --enable=all --language=c++ --std=c++11 . 
 # - clang-tidy -checks='*' -p . src/*.cpp
  - cd $TRAVIS_BUILD_DIR/build/Release
- - tar cfvz say_hello_addon_$PLATFORM$ARCH.tar.gz say_hello_addon.node 
+ - tar cfvz say_hello_addon_$ARCH.tar.gz say_hello_addon.node 
  - cd $TRAVIS_BUILD_DIR
 install:
  - npm install -g mocha
@@ -41,7 +41,7 @@ deploy:
  - provider: releases
    email: aitbenmouh@gmail.com
    api_key: $githubKey
-   file: "$TRAVIS_BUILD_DIR/build/Release/say_hello_addon_$PLATFORM$ARCH.tar.gz"
+   file: "$TRAVIS_BUILD_DIR/build/Release/say_hello_addon_$ARCH.tar.gz"
    skip_cleanup: true
    
         
