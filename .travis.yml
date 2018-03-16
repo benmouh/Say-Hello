@@ -6,8 +6,11 @@ os :
  - osx
 
 env:
- - PLATFORM="$TRAVIS_OS_NAME"
- 
+ Say-Hello:
+  - ARCH=x86_64
+  - PLATFORM="$TRAVIS_OS_NAME"
+platform:
+ - x64 
 addons:
   apt:
     packages:
