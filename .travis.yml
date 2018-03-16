@@ -6,8 +6,8 @@ os :
  - osx
 
 env:
- PLATFORM="$TRAVIS_OS_NAME"
- ARCH = "64"
+ - PLATFORM="$TRAVIS_OS_NAME"
+ - ARCH="64"
 addons:
   apt:
     packages:
