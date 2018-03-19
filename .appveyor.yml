@@ -17,8 +17,8 @@ test_script:
  - npm test
   
 artifacts:
- - path: build\Release\say_hello_addon_win64.7z
- - name: say_hello_addon_win64.7z
+ path: build\Release\say_hello_addon_win64.7z
+ name: say_hello_addon_win64.7z
 deploy:
  description: 'windows release version'
  provider: GitHub
