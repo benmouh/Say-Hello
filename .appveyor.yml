@@ -6,7 +6,6 @@ configuration: Release
 install:
 - ps: Install-Product node $env:nodejs_version $env:platform
 - npm install -g node-gyp
-build: off
 build_script:
 - node-gyp configure
 - node-gyp build
