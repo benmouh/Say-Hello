@@ -4,20 +4,21 @@ environment:
 platform: x64
 configuration: Release
 install:
-- ps: Install-Product node $env:nodejs_version $env:platform
-- npm install -g node-gyp
+ - ps: Install-Product node $env:nodejs_version $env:platform
+ - npm install -g node-gyp
+ - npm install -g mocha
 build_script:
-- node-gyp configure
-- node-gyp build
-- cd %APPVEYOR_BUILD_FOLDER%\build\Release\
-- 7z a -tgzip say_hello_addon_win64.7z say_hello_addon.node
-- cd %APPVEYOR_BUILD_FOLDER%
+ - node-gyp configure
+ - node-gyp build
+ - cd %APPVEYOR_BUILD_FOLDER%\build\Release\
+ - 7z a -tgzip say_hello_addon_win64.7z say_hello_addon.node
+ - cd %APPVEYOR_BUILD_FOLDER%
 test_script:
-  - npm test
+ - npm test
   
 artifacts:
-- path: build\Release\say_hello_addon_win64.7z
-  name: say_hello_addon_win64.7z
+ - path: build\Release\say_hello_addon_win64.7z
+ - name: say_hello_addon_win64.7z
 deploy:
  description: 'windows release version'
  provider: GitHub
