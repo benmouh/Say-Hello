@@ -12,6 +12,9 @@ build_script:
 - cd %APPVEYOR_BUILD_FOLDER%\build\Release\
 - 7z a -tgzip say_hello_addon_win64.7z say_hello_addon.node
 - cd %APPVEYOR_BUILD_FOLDER%
+test_script:
+  - npm test
+  
 artifacts:
 - path: build\Release\say_hello_addon_win64.7z
   name: say_hello_addon_win64.7z
