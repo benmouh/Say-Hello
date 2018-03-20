@@ -45,5 +45,7 @@ deploy:
    api_key: $githubKey
    file: "$TRAVIS_BUILD_DIR/build/Release/say_hello_addon_$ARCHITECTURE.tar.gz"
    skip_cleanup: false
+   on:
+    branch : master
    
         
