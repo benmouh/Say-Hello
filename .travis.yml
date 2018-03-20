@@ -1,6 +1,7 @@
 language: node_js
 node_js:
  - "8"
+ - "9"
 os : 
  - linux
  - osx
@@ -44,6 +45,6 @@ deploy:
    email: aitbenmouh@gmail.com
    api_key: $githubKey
    file: "$TRAVIS_BUILD_DIR/build/Release/say_hello_addon_$ARCHITECTURE.tar.gz"
-   skip_cleanup: true
+   skip_cleanup: false
    
         
