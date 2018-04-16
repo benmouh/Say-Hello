@@ -1,6 +1,6 @@
 {
   "name": "hello-world-addon",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This a say hello node addon, require it then call the sayHello method",
   "main": "index.js",
   "scripts": {
@@ -12,16 +12,22 @@
   },
   "devDependencies": {},
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build"
+    "install": "node-pre-gyp install --fallback-to-build",
+	"test": "mocha",
+    "prepare": "npm ls"
   },
   "binary": {
     "module_name": "hello-world-addon",
     "module_path": "./bin/",
-    "host": "https://github.com/benmouh/Say-Hello/releases",
+    "host": "https://github.com/benmouh/Say-Hello/releases/download/",
     "remote_path": "./v{version}/",
     "package_name": "say_hello_addon_{platform}.tar.gz"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benmouh/Say-Hello.git"
+  },
+  "keywords": ["node", "addon", "c++", "C", "JavaScript"],
   "author": "Lhoussaine ATI BEN MOUH <aitbenmouh@yahoo.fr> (https://github.com/benmouh)",
   "license": "MIT"
 }
