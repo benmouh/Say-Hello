@@ -9,6 +9,7 @@ install:
  - npm install -g node-pre-gyp
  - npm install -g mocha
 build_script:
+ - npm install --build-from-source
  - node-pre-gyp configure
  - node-pre-gyp build
  - copy %APPVEYOR_BUILD_FOLDER%\build\Release\say_hello_addon.node %APPVEYOR_BUILD_FOLDER%\bin
