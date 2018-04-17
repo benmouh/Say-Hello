@@ -21,9 +21,10 @@ before_install:
  - echo $TRAVIS_OS_NAME
 script:
  - npm install -g node-gyp
- - npm install -g node-pre-gyp 
- - node-gyp configure
- - node-gyp build
+ - npm install -g node-pre-gyp
+ - npm install --build-from-source 
+ - node-pre-gyp configure
+ - node-pre-gyp build
  - npm test
 # - cppcheck  -v --enable=all --language=c++ --std=c++11 . 
 # - clang-tidy -checks='*' -p . src/*.cpp
