@@ -31,5 +31,5 @@ deploy:
 # '%appveyorGithub%'
  artifact: build\Release\say_hello_addon_win32.tar.gz
  on:
-  appveyor_repo_tag: false
+  appveyor_repo_tag: true
   configuration: Release

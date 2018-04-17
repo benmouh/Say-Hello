@@ -41,11 +41,15 @@ deploy:
  - provider: npm
    email: aitbenmouh@gmail.com
    api_key: $apikey
+   on:
+    branch: master
+    tags: true
  - provider: releases
    email: aitbenmouh@gmail.com
    api_key: $githubKey
    file: "$TRAVIS_BUILD_DIR/build/Release/say_hello_addon_$ARCHITECTURE.tar.gz"
-   skip_cleanup: false
- - verbose: true
-   
+   skip_cleanup: true
+   on :
+    repo: benmouh/Say-Hello
+    tags: true
         
