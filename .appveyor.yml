@@ -27,7 +27,7 @@ deploy:
  provider: GitHub
  branch: master    
  auth_token:
-  secure: kW2dq5Hyg8WlsGniBQ7Xs9c0AM7teybE4HjQcig8Jaw4yeGvoOqkQ49wUTvmKL08
+  secure: %appveyorGithub%
 # '%appveyorGithub%'
  artifact: build\Release\say_hello_addon_win32.tar.gz
  on:
