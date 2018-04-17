@@ -15,7 +15,7 @@ build_script:
  - copy %APPVEYOR_BUILD_FOLDER%\build\Release\say_hello_addon.node %APPVEYOR_BUILD_FOLDER%\bin
  - 7z a -ttar %APPVEYOR_BUILD_FOLDER%\build\Release\tmp.tar %APPVEYOR_BUILD_FOLDER%\bin
  - 7z a -tgzip %APPVEYOR_BUILD_FOLDER%\build\Release\say_hello_addon_win32.tar.gz %APPVEYOR_BUILD_FOLDER%\build\Release\tmp.tar
- 
+ - echo %appveyorGithub%
 test_script:
  - npm test
   
