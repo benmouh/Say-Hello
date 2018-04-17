@@ -6,7 +6,7 @@ os :
  - osx
 
 env:
-  - ARCHITECTURE="$TRAVIS_OS_NAME-x86_64"
+  - ARCHITECTURE="$TRAVIS_OS_NAME"
  
 addons:
   apt:
