@@ -2,7 +2,7 @@ image: Visual Studio 2017
 environment:
  -nodejs_version: "8"
  -appveyorGithub:
-  secure:"kW2dq5Hyg8WlsGniBQ7Xs9c0AM7teybE4HjQcig8Jaw4yeGvoOqkQ49wUTvmKL08"
+  secure: kW2dq5Hyg8WlsGniBQ7Xs9c0AM7teybE4HjQcig8Jaw4yeGvoOqkQ49wUTvmKL08
 platform: x64
 configuration: Release
 install:
