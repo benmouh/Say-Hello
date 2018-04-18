@@ -1,8 +1,7 @@
 image: Visual Studio 2017
 environment:
  -nodejs_version: "8"
- -appveyorGithub:
-  secure: kW2dq5Hyg8WlsGniBQ7Xs9c0AM7teybE4HjQcig8Jaw4yeGvoOqkQ49wUTvmKL08
+ 
 platform: x64
 configuration: Release
 install:
@@ -29,8 +28,7 @@ deploy:
  provider: GitHub
  branch: master    
  auth_token:
-  secure:$env:appveyorGithub
-# '%appveyorGithub%'
+  secure: kW2dq5Hyg8WlsGniBQ7Xs9c0AM7teybE4HjQcig8Jaw4yeGvoOqkQ49wUTvmKL08
  artifact: build\Release\say_hello_addon_win32.tar.gz
  on:
   appveyor_repo_tag: true
