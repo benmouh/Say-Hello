@@ -2,7 +2,7 @@
   "name": "hello-world-addon",
   "version": "1.0.3",
   "description": "This a say hello node addon, require it then call the sayHello method",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "mocha"
   },
