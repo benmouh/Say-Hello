@@ -14,15 +14,15 @@ addons:
       - cppcheck
       - llvm-dev
 before_install:
- - npm install -g node-gyp
- - npm install -g node-pre-gyp
  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ARCHITECTURE="darwin" ;fi
  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository 'deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-6.0 release' ;fi
  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then curl -L 'http://llvm.org/apt/llvm-snapshot.gpg.key' | sudo apt-key add - ;fi
  - echo $ARCHITECTURE
  - echo $TRAVIS_OS_NAME
 script:
- - npm install --build-from-source 
+ - npm install --build-from-source
+ - npm install -g node-gyp
+ - npm install -g node-pre-gyp 
  - node-pre-gyp configure
  - node-pre-gyp build
  - npm test
@@ -41,7 +41,7 @@ install:
 deploy:
  - provider: npm
    email: aitbenmouh@gmail.com
-   api_key: $apikey
+   api_key: $npmKey
    on:
     branch: master
     tags: true
