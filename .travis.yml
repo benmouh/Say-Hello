@@ -38,8 +38,6 @@ install:
 # - curl -L http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
 # - sudo apt-get update
 # - sudo apt-get install llvm-dev
-before_deploy:
- - npm install
 deploy:
  - provider: npm
    email: aitbenmouh@gmail.com
