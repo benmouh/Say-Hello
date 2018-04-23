@@ -5,8 +5,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "install": "node-pre-gyp install --fallback-to-build",
-    "test": "mocha",
-    "prepare": "npm ls"
+    "test": "mocha"
   },
   "dependencies": {  
     "node-pre-gyp": "^0.9.1",
