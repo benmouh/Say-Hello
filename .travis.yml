@@ -28,8 +28,10 @@ script:
  - npm test
 # - cppcheck  -v --enable=all --language=c++ --std=c++11 . 
 # - clang-tidy -checks='*' -p . src/*.cpp
+ - mkdir $TRAVIS_BUILD_DIR/build/Release/bin
+ - cp $TRAVIS_BUILD_DIR/build/Release/say_hello_addon.node $TRAVIS_BUILD_DIR/build/Release/bin
  - cd $TRAVIS_BUILD_DIR/build/Release
- - tar cfvz say_hello_addon_$ARCHITECTURE.tar.gz say_hello_addon.node 
+ - tar cfvz say_hello_addon_$ARCHITECTURE.tar.gz bin 
  - cd $TRAVIS_BUILD_DIR
 install:
  - npm install -g mocha
