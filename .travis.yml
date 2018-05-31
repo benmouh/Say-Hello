@@ -44,7 +44,6 @@ deploy:
  - provider: npm
    email: aitbenmouh@gmail.com
    api_key: $npmKey
-   skip_cleanup: true
    on:
     branch: master
     tags: true
