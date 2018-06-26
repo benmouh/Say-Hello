@@ -26,6 +26,11 @@ script:
  - node-pre-gyp configure
  - node-pre-gyp build
  - npm test
+ - cd $TRAVIS_BUILD_DIR/test/cctest
+ - cmake -DCMAKE_BUILD_TYPE=Release
+ - make tests
+ - ./tests
+ - cd $TRAVIS_BUILD_DIR
 # - cppcheck  -v --enable=all --language=c++ --std=c++11 . 
 # - clang-tidy -checks='*' -p . src/*.cpp
  - mkdir $TRAVIS_BUILD_DIR/build/Release/bin
