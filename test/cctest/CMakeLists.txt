@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.0)
 
 project(cmake_test)
 
+# enable Cxx11
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
 # Prepare "Catch" library for other executables
 
 set(CATCH_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/. ${PROJECT_SRC_DIR}/src/ )
