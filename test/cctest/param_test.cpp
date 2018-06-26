@@ -1,7 +1,7 @@
 #define CATCH_CONFIG_MAIN
 
-#include "../say_hello.hpp"
-#include "../catch.hpp"
+#include "say_hello.hpp"
+#include "catch.hpp"
 
 
 
