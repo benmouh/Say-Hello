@@ -1,4 +1,5 @@
 #include "say_hello.hpp"
+#include <string>
 
 namespace Hello {
 
@@ -10,5 +11,8 @@ namespace Hello {
 		else res = Factorial(number - 1) * number;
 		return res;
 
+	}
+	std::string NativeSayHello(const std::string& str) {
+		return "Hello " + str;
 	}
 }

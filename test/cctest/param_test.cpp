@@ -17,5 +17,5 @@ TEST_CASE("Factorials not computed", "[factorial]") {
 }
 
 TEST_CASE("Main test ", "[SayHello]") {
-    REQUIRE( Hello::Factorial(1) == 1);
+    REQUIRE( Hello::NativeSayHello("lhoussaine") == "Hello lhoussaine");
 }

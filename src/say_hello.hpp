@@ -1,6 +1,6 @@
-
+#include <string>
 namespace Hello {
 	
 	int Factorial(int number);
-	//void SayHello(const FunctionCallbackInfo<Value>& args); 
+	std::string NativeSayHello(const std::string& str);
 }
